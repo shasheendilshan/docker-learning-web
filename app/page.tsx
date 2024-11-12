@@ -1,101 +1,84 @@
-import Image from "next/image";
+import Head from "next/head";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <Head>
+        <title>Next.js Docker Learning App</title>
+        <meta name="description" content="Learn Docker with a Next.js and Tailwind CSS application" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+      <main className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="w-full px-6 py-12 bg-white shadow-md">
+          <div className="container mx-auto text-center">
+            <h1 className="text-4xl font-bold text-gray-800 sm:text-5xl lg:text-6xl">
+              Learn Docker 
+            </h1>
+            <p className="mt-4 text-lg text-gray-600 sm:text-xl">
+              Master Docker by building and deploying a Next.js application.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center space-x-4">
+              <a
+                href="https://docs.docker.com/get-started/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 text-white bg-blue-600 rounded-md shadow hover:bg-blue-700"
+              >
+                Get Started with Docker
+              </a>
+              <a
+                href="https://docs.docker.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 text-blue-600 border border-blue-600 rounded-md hover:bg-blue-50"
+              >
+                Docker Documentation
+              </a>
+              <a
+                href="https://docs.docker.com/get-started/docker_cheatsheet.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 text-green-600 border border-green-600 rounded-md hover:bg-green-50"
+              >
+                Docker Cheat Sheet
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Docker Learning Section */}
+        <section className="w-full px-6 py-12 bg-gray-100">
+          <div className="container mx-auto text-center">
+            <h2 className="text-3xl font-semibold text-gray-800">Why Learn Docker?</h2>
+            <p className="mt-4 text-lg text-gray-600">
+              Docker helps you package and run applications in isolated containers. It simplifies deployment and scaling, making it an essential tool for modern web development.
+            </p>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-6 bg-white rounded-lg shadow">
+              <h3 className="text-xl font-semibold text-gray-800">Containerization</h3>
+              <p className="mt-2 text-gray-600">
+                Use Docker to package your application and its dependencies into a single container for consistency across environments.
+              </p>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow">
+              <h3 className="text-xl font-semibold text-gray-800">Simplified Deployment</h3>
+              <p className="mt-2 text-gray-600">
+                Easily deploy your Next.js app to any environment using Docker, ensuring consistent performance.
+              </p>
+            </div>
+            <div className="p-6 bg-white rounded-lg shadow">
+              <h3 className="text-xl font-semibold text-gray-800">Scalability</h3>
+              <p className="mt-2 text-gray-600">
+                Leverage Docker&apos;s capabilities to scale your applications effortlessly as your project grows.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
