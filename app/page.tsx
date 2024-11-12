@@ -1,11 +1,15 @@
 import Head from "next/head";
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>Next.js Docker Learning App</title>
-        <meta name="description" content="Learn Docker with a Next.js and Tailwind CSS application" />
+        <meta
+          name="description"
+          content="Learn Docker with a Next.js and Tailwind CSS application"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -13,8 +17,15 @@ export default function Home() {
         {/* Hero Section */}
         <section className="w-full px-6 py-12 bg-white shadow-md">
           <div className="container mx-auto text-center">
+            <Image
+              src="/docker-seeklogo.svg"
+              alt="Docker Hero Image"
+              width={400}
+              height={100}
+              className="mx-auto mb-8"
+            />
             <h1 className="text-4xl font-bold text-gray-800 sm:text-5xl lg:text-6xl">
-              Learn Docker 
+              Learn Docker with Next.js
             </h1>
             <p className="mt-4 text-lg text-gray-600 sm:text-xl">
               Master Docker by building and deploying a Next.js application.
@@ -51,29 +62,63 @@ export default function Home() {
         {/* Docker Learning Section */}
         <section className="w-full px-6 py-12 bg-gray-100">
           <div className="container mx-auto text-center">
-            <h2 className="text-3xl font-semibold text-gray-800">Why Learn Docker?</h2>
+            <h2 className="text-3xl font-semibold text-gray-800">
+              Why Learn Docker?
+            </h2>
             <p className="mt-4 text-lg text-gray-600">
-              Docker helps you package and run applications in isolated containers. It simplifies deployment and scaling, making it an essential tool for modern web development.
+              Docker helps you package and run applications in isolated
+              containers. It simplifies deployment and scaling, making it an
+              essential tool for modern web development.
             </p>
           </div>
 
           <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-6 bg-white rounded-lg shadow">
-              <h3 className="text-xl font-semibold text-gray-800">Containerization</h3>
+              <Image
+                src="/docker-container.png"
+                alt="Containerization Icon"
+                width={100}
+                height={100}
+                className="mx-auto mb-4"
+              />
+              <h3 className="text-xl font-semibold text-gray-800">
+                Containerization
+              </h3>
               <p className="mt-2 text-gray-600">
-                Use Docker to package your application and its dependencies into a single container for consistency across environments.
+                Use Docker to package your application and its dependencies into
+                a single container for consistency across environments.
               </p>
             </div>
             <div className="p-6 bg-white rounded-lg shadow">
-              <h3 className="text-xl font-semibold text-gray-800">Simplified Deployment</h3>
+              <Image
+                src="/cloud-server.svg"
+                alt="Server Image"
+                width={100}
+                height={100}
+                className="mx-auto mb-4"
+              />
+              <h3 className="text-xl font-semibold text-gray-800">
+                Simplified Deployment
+              </h3>
               <p className="mt-2 text-gray-600">
-                Easily deploy your Next.js app to any environment using Docker, ensuring consistent performance.
+                Easily deploy your Next.js app to any environment using Docker,
+                ensuring consistent performance.
               </p>
             </div>
             <div className="p-6 bg-white rounded-lg shadow">
-              <h3 className="text-xl font-semibold text-gray-800">Scalability</h3>
+              <Image
+                src="/scalability.png"
+                alt="Scalability Image"
+                width={100}
+                height={100}
+                className="mx-auto mb-4"
+              />
+              <h3 className="text-xl font-semibold text-gray-800">
+                Scalability
+              </h3>
               <p className="mt-2 text-gray-600">
-                Leverage Docker&apos;s capabilities to scale your applications effortlessly as your project grows.
+                Leverage Docker&apos;s capabilities to scale your applications
+                effortlessly as your project grows.
               </p>
             </div>
           </div>
